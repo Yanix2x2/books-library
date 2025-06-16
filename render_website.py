@@ -1,8 +1,7 @@
 import json
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from livereload import Server, shell
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from livereload import Server
 from more_itertools import chunked
 
 with open('books/meta_data.json', 'r', encoding="UTF-8") as meta_data:
