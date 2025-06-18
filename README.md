@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ```
 
 ## Запуск
-Запустите сервер:
+Запустите сервер в командной строке:
 ```bash
 python render_website.py
 ```
