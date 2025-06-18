@@ -11,7 +11,7 @@
 * Автоперезагрузка: Livereload для удобства разработки
 * Пагинация: 20 книг на страницу, разбитых на 2 колонки
 
-![Screenshot_1](https://gist.github.com/user-attachments/assets/e4998c8a-a65d-45f7-9cb2-964570f211a5)
+![Screenshot_1](https://github.com/user-attachments/assets/49137776-fd14-4145-a0af-446b66650d6e)
 
 ## Использование библиотеки offline
 
