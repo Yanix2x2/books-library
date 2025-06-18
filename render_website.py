@@ -1,6 +1,7 @@
 import os
 import json
 from pprint import pprint
+import math
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
@@ -24,23 +25,18 @@ def on_reload():
 
     books_per_page = 20
     pages = list(chunked(books, books_per_page))
+    page_amount = math.ceil(len(books) / books_per_page)
     for page_num, books_chunk in enumerate(pages, start=1):
         page = list(chunked(books_chunk, 2))
         rendered_page = template.render(
             books=page,
-            page_number=page_num
+            page_number=page_num,
+            page_amount=page_amount
         )
 
         filename = os.path.join('pages', f'index{page_num}.html')
         with open(filename, 'w', encoding='utf8') as file:
             file.write(rendered_page)
-
-    # rendered_page = template.render(
-    #     books=chunked(books, 2)
-    # )
-
-    # with open('index.html', 'w', encoding="utf8") as file:
-    #     file.write(rendered_page)
 
 
 server = Server()
