@@ -1,13 +1,12 @@
 import os
 import json
-from pprint import pprint
 import math
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 from more_itertools import chunked
 
-with open('books/meta_data.json', 'r', encoding="UTF-8") as meta_data:
+with open('media/meta_data.json', 'r', encoding="UTF-8") as meta_data:
     books_json = meta_data.read()
 
 
